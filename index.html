@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | HTML/CSS Developer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+            <div class="loader-square"></div>
+        </div>
+    </div>
+
+    <!-- Floating Cursor -->
+    <div class="cursor"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="logo-text">MY PORTFOLIO</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-2">
+                        <div class="form-check form-switch theme-toggle">
+                            <input class="form-check-input" type="checkbox" id="themeToggle">
+                            <label class="form-check-label" for="themeToggle">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-right">
+                    <h4 class="text-primary">Hello, I'm</h4>
+                    <h1 class="hero-title">Shaikh Jahir Atik</h1>
+                    <h3 class="hero-subtitle">Student & <span class="text-gradient">Web Developer</span></h3>
+                    <p class="hero-description">I create beautiful websites using HTML, CSS and basic JavaScript. Currently learning Python and Java programming.</p>
+                    <div class="hero-buttons">
+                        <a href="your-resume.pdf" class="btn btn-primary btn-hover-effect">Download CV</a>
+                        
+                    </div>
+                    <div class="social-icons mt-4">
+                        <a href="https://github.com/iamjahir09" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/yourprofile" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image-container">
+                        <div class="hero-image-wrapper">
+                            <!-- Original square image use karo -->
+                            <img src="profile-pic.jpg" alt="Profile Image" class="hero-image">
+                            <div class="floating-shapes">
+                                <div class="shape shape-1"></div>
+                                <div class="shape shape-2"></div>
+                                <div class="shape shape-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span class="scroll-text">Scroll Down</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="about-image-container">
+                        <!-- Avatar placeholder with initials -->
+                        <div class="avatar-container">
+                            <img src="my-pic.jpg" alt="Jahir" class="profile-circle-image">
+                        </div>
+                        
+                        <div class="about-badge">
+                            <div class="badge-content">
+                                <span class="badge-number">5+</span>
+                                <span class="badge-text">Projects Done</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <h3 class="about-title">Who am I?</h3>
+                    <p class="about-text">I'm a 3rd year student at Anjuman-I-Islam Kalsekar Technical Campus. I have strong skills in HTML and CSS, and I'm currently learning JavaScript, Python and Java to become a full-stack developer.</p>
+                    
+                    <div class="about-details">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="detail-item">
+                                    <span class="detail-label">Name:</span>
+                                    <span class="detail-value">Shaikh Jahir Atik</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Email:</span>
+                                    <span class="detail-value">iamjahir09@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="detail-item">
+                                    <span class="detail-label">College:</span>
+                                    <span class="detail-value">AIKTC, New Panvel</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">Degree:</span>
+                                    <span class="detail-value">B.E (Current)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-tabs mt-4">
+                        <ul class="nav nav-tabs" id="aboutTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills-tab-pane" type="button" role="tab">Skills</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane" type="button" role="tab">Education</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="learning-tab" data-bs-toggle="tab" data-bs-target="#learning-tab-pane" type="button" role="tab">Currently Learning</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="aboutTabContent">
+                            <div class="tab-pane fade show active" id="skills-tab-pane" role="tabpanel">
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">HTML5</span>
+                                        <span class="skill-percent">90%</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">CSS3</span>
+                                        <span class="skill-percent">85%</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-header">
+                                        <span class="skill-name">Git/GitHub</span>
+                                        <span class="skill-percent">80%</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="education-tab-pane" role="tabpanel">
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2023 - 2027</div>
+                                        <div class="timeline-content">
+                                            <h5>B.E in Computer Science</h5>
+                                            <p>Anjuman-I-Islam Kalsekar Technical Campus</p>
+                                            <p>Current CGPA: 7.75/10.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">2021 - 2023</div>
+                                        <div class="timeline-content">
+                                            <h5>Higher Secondary (12th)</h5>
+                                            <p>Shri Tripura Jr.Science College</p>
+                                            <p>Percentage: 80%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="learning-tab-pane" role="tabpanel">
+                                <div class="awards-list">
+                                    <div class="award-item">
+                                        <div class="award-icon"><i class="fas fa-code"></i></div>
+                                        <div class="award-content">
+                                            <h5>JavaScript</h5>
+                                            <p>Learning DOM manipulation and basic concepts</p>
+                                        </div>
+                                    </div>
+                                    <div class="award-item">
+                                        <div class="award-icon"><i class="fab fa-python"></i></div>
+                                        <div class="award-content">
+                                            <h5>Python</h5>
+                                            <p>Learning fundamentals and basic scripting</p>
+                                        </div>
+                                    </div>
+                                    <div class="award-item">
+                                        <div class="award-icon"><i class="fab fa-java"></i></div>
+                                        <div class="award-content">
+                                            <h5>Java</h5>
+                                            <p>Learning OOP concepts and syntax</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section bg-light">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">My <span class="text-gradient">Skills</span></h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="skills-content">
+                        <h3 class="skills-title">My technical skills</h3>
+                        <p class="skills-text">I have strong foundation in front-end development and currently expanding my skills in programming languages.</p>
+                        <div class="skills-progress">
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span>HTML5</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span>CSS3</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span>JavaScript</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-info">
+                                    <span>Python</span>
+                                    <span>50%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="skills-chart">
+                        <div class="chart-container">
+                            <div class="chart-item">
+                                <div class="chart-circle" data-percent="90" data-color="#6c63ff">
+                                    <span>90%</span>
+                                </div>
+                                <h5>HTML5</h5>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-circle" data-percent="85" data-color="#ff6584">
+                                    <span>85%</span>
+                                </div>
+                                <h5>CSS3</h5>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-circle" data-percent="60" data-color="#20c997">
+                                    <span>60%</span>
+                                </div>
+                                <h5>JavaScript</h5>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-circle" data-percent="50" data-color="#fd7e14">
+                                    <span>50%</span>
+                                </div>
+                                <h5>Python</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-tech mt-5" data-aos="fade-up">
+                <h4 class="tech-title">Technologies I work with:</h4>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap">
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                        <span>Java</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                        <span>VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">My <span class="text-gradient">Projects</span></h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-filter" data-aos="fade-up">
+                <ul class="filter-list">
+                    <li class="filter-item active" data-filter="all">All</li>
+                    <li class="filter-item" data-filter="web">Web Design</li>
+                    <li class="filter-item" data-filter="python">Python</li>
+                    <li class="filter-item" data-filter="java">Java</li>
+                </ul>
+            </div>
+            <div class="row projects-grid">
+                <!-- Project 1 - Web Design -->
+                <div class="col-md-6 col-lg-4 project-item" data-category="web" data-aos="fade-up">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="BrainFuel.png" alt="Project 1">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="project1-live-demo.com" class="project-link"><i class="fas fa-link"></i></a>
+                                    <a href="https://github.com/iamjahir09/new" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Study Material</h4>
+                            <p class="project-category">Python</p>
+                            <p class="project-description">Created Website for Neet/Jee students where they can get the notes on particular topic in ehich they have doubt by seraching the topic name using HTML, CSS, Js, Python and Bootstrap.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - Web Design -->
+                <div class="col-md-6 col-lg-4 project-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="my portfolio.png" alt="Project 2">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="project2-live-demo.com" class="project-link"><i class="fas fa-link"></i></a>
+                                    <a href="https://github.com/iamjahir09/portfolio" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Personal Portfolio</h4>
+                            <p class="project-category">Web Design</p>
+                            <p class="project-description">Created a responsive personal portfolio website with dark/light mode toggle.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 - Python -->
+                <div class="col-md-6 col-lg-4 project-item" data-category="java" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="calci.png" alt="Project 3">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/yourusername/project3" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title">Calculator</h4>
+                            <p class="project-category">java</p>
+                            <p class="project-description">As begineer in java created a simple calculator</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">java</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 - Java -->
+                <div class="col-md-6 col-lg-4 project-item" data-category="python" data-aos="fade-up">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="DNA.png" alt="Project 4">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/yourusername/project4" class="project-link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h4 class="project-title"></h4>
+                            <p class="project-category">Python</p>
+                            <p class="project-description">Given a DNA sequence and its mutated form, predict the resulting change in the encoded protein sequence. Clearly identify the location of the mutation in the DNA (nucleotide position), specify the original and mutated codons, and highlight the exact change in the amino acid sequence.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Machine learning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more projects as needed -->
+            </div>
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="https://github.com/iamjahir09" class="btn btn-primary btn-hover-effect">View All Projects on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+                <p class="section-subtitle">Let's connect and collaborate</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="contact-info">
+                        <h3 class="contact-title">Contact Information</h3>
+                        <p class="contact-text">Feel free to reach out to me for any questions or opportunities.</p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h5>Email</h5>
+                                    <a href="mailto:your.email@example.com">iamjahir09@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h5>Phone</h5>
+                                    <a href="tel:+919876543210">+91 7028401587</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-content">
+                                    <h5>Location</h5>
+                                    <span>New Panvel, Maharashtra</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <h5>Follow Me</h5>
+                            <div class="social-icons">
+                                <a href="https://github.com/iamjahir09" class="social-icon"><i class="fab fa-github"></i></a>
+                                <a href="https://linkedin.com/in/yourprofile" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-form">
+                        <h3 class="form-title">Send Me a Message</h3>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-hover-effect">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo-text">MY PORTFOLIO</a>
+                </div>
+                <div class="footer-links">
+                    <ul class="footer-menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/iamjahir09/profile" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
