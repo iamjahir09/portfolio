@@ -294,3 +294,65 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const heroImageWrapper = document.querySelector('.hero-image-wrapper');
+    const heroImageContainer = document.querySelector('.hero-image-container'); // Or any parent element that defines the area for interaction
+
+    if (!heroImageWrapper || !heroImageContainer) {
+        console.error('Required elements not found for the 3D effect.');
+        return;
+    }
+
+    heroImageContainer.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        const { left, top, width, height } = heroImageContainer.getBoundingClientRect();
+
+        // Calculate the center of the container
+        const centerX = left + width / 2;
+        const centerY = top + height / 2;
+
+        // Calculate the position relative to the center (-1 to 1 range)
+        const mouseX = (clientX - centerX) / (width / 2); // -1 to 1 (left to right)
+        const mouseY = (clientY - centerY) / (height / 2); // -1 to 1 (top to bottom)
+
+        // Define the maximum rotation angles (adjust for desired intensity)
+        const maxRotationX = 10; // degrees
+        const maxRotationY = 10; // degrees
+
+        // Calculate rotation based on mouse position
+        // Invert Y-axis rotation so moving mouse down tilts the top forward
+        const rotateY = mouseX * maxRotationY;
+        const rotateX = -mouseY * maxRotationX; // Inverted for natural feel
+
+        // Apply the 3D transform
+        heroImageWrapper.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) perspective(1000px)`;
+    });
+
+    // Reset rotation when the mouse leaves the container
+    heroImageContainer.addEventListener('mouseleave', () => {
+        heroImageWrapper.style.transform = `rotateX(0deg) rotateY(0deg) perspective(1000px)`;
+    });
+});
+// 3D Tilt Effect with Border Rotation
+const heroWrapper = document.querySelector('.hero-image-wrapper');
+
+document.addEventListener('mousemove', (e) => {
+    const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+    const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+    
+    heroWrapper.style.transform = `
+        rotateX(${yAxis}deg)
+        rotateY(${xAxis}deg)
+        scale(1.03)
+    `;
+    
+    // Make the border rotate faster when mouse moves
+    const speed = Math.sqrt(xAxis*xAxis + yAxis*yAxis);
+    heroWrapper.style.setProperty('--rotation-speed', `${8 - speed/2}s`);
+});
+
+document.addEventListener('mouseleave', () => {
+    heroWrapper.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+    heroWrapper.style.setProperty('--rotation-speed', '8s');
+});
+
